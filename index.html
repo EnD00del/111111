@@ -1,0 +1,92 @@
+<!DOCTYPE html>                                 <!--이 파일은 HTML5 문법을 사용하는 문서라는 선언문-->
+<html lang="ko">                                <!--언어정보:브라우저, 검색엔진 등이 참고함-->
+
+
+<head>
+    <meta charset="UTF-8">                        <!--문자 인코딩 방식. 웬만한 언어는 UTF-8에서 안깨짐-->
+    <title>나의 첫 퀘스트 페이지</title>             <!--브라우저 탭에 보이는 제목-->
+</head>
+
+
+<body>
+  <h1>Short Quests</h1>
+  <p>여러 개의 퀘스트를 만들고, 매일 기록하면서 진행도를 관리해보자.</p>
+
+  <hr>
+
+  <!-- 새 퀘스트 생성 -->
+  <section>
+    <h2>새 퀘스트 만들기</h2>
+
+    <label>
+      퀘스트 이름:
+      <input id="goal-title" type="text" placeholder="예: 7일 동안 100문제 풀기">
+    </label>
+    <br><br>
+
+    <label>
+      총량:
+      <input id="goal-total" type="number" placeholder="예: 100">
+    </label>
+    <br><br>
+
+    <label>
+      단위:
+      <input id="goal-unit" type="text" placeholder="예: 문제, 페이지, 분">
+    </label>
+    <br><br>
+
+    <button id="set-goal">퀘스트 추가</button>
+  </section>
+
+  <hr>
+
+  <!-- 퀘스트 목록 -->
+  <section>
+    <h2>퀘스트 목록</h2>
+    <ul id="quest-list">
+      <!-- 자바스크립트가 여기 안에 <li>들을 채울 거야 -->
+    </ul>
+  </section>
+
+  <hr>
+
+  <!-- 현재 선택된 퀘스트 진행 상황 -->
+  <section>
+    <h2>현재 퀘스트 진행 상황</h2>
+    <p id="goal-summary">선택된 퀘스트가 없습니다.</p>
+
+    <div style="background:#eee; width:100%; height:20px;">
+      <div id="progress-bar" style="background:#4caf50; width:0%; height:100%;"></div>
+    </div>
+
+    <p id="progress-text">0% 완료</p>
+  </section>
+
+  <hr>
+
+  <!-- 오늘 기록 -->
+  <section>
+    <h2>오늘 기록</h2>
+    <p id="today-label"></p>
+
+    <label>
+      오늘 한 양:
+      <input id="today-amount" type="number" placeholder="예: 10">
+    </label>
+    <button id="add-today">추가</button>
+  </section>
+
+  <hr>
+
+  <!-- 날짜별 기록 -->
+  <section>
+    <h2>날짜별 기록</h2>
+    <ul id="record-list">
+      <!-- 자바스크립트로 날짜별 기록이 들어갈 곳 -->
+    </ul>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
